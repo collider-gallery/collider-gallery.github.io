@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="icon.png">
+    <title>COLLIDER</title>
+    
+</head>
+<body>
+
+<div class="header-container">
+    <div class="header-element"><a href="index.html">Collider</a></div>
+    <div class="menu-element"><a id="menu-button" onclick="toggleMenu()">Menu</a>
+        <div id="header-dropdown">
+            <a href="index.html">Home</a>
+            <br>
+            <a href="mailto:collider.ari@gmail.com">Contact</a>
+            <br> 
+            <a href="https://blankmarket.herokuapp.com" target="_blank">Webstore</a>  
+            <br>
+        </div>
+    </div>
+</div>    
+
+<div class="content-container">
+    <div class="content-element">
+        <dl>
+            <dt>1.1 UPCOMING</dt>
+            <br>
+            <dd>Construction & Destruction: An Index of Violence</dd>
+            <dd>26 April - 20 May</dd>
+            <dd>First Site Gallery</dd>
+            <dd>Downstairs, 344 Swanston St, Melbourne</dd>
+            <dd><a href="https://photo.org.au/events/construction-and-destruction" target="_blank">(+ More Info)</a></dd>
+            <br><br>
+            <dd>COLLIDER Editions</dd>
+            <dd>Photobook Weekend (Photo22 Program)</dd>
+            <dd>Photography Studies College (PSC), South Melbourne</dd>
+            <dd>21 May - 22 May</dd>
+            <dd><a href="https://photo.org.au/photobook-weekend" target="_blank">(+ More Info)</a></dd>
+            <br><br>
+            <dt>1.2 SELECTED WORK + PRESS</dt>
+            <br>
+            <dd>Co-Publishing Issue 02: Water</dd>
+            <dd>Commissioned Contribution</dd>
+            <dd>ISBN: 9780645052220</dd>
+            <dd><a href="https://bookshopbyuro.com/products/co-publishing-issue-02-water?ltclid=2371b669-fe51-4c02-9fe6-17a34bc56145" target="_blank">(+ Available Here)</a></dd>
+            <br><br>
+            <dt>1.3 CONTRIBUTING ARTISTS</dt>
+            <br>
+            <dd><a href="http://adrianjsong.com" target="_blank">Adrian J. Song</a></dd>
+            <dd><a href="http://maud.work" target="_blank">Maud Freeman</a></dd>
+            <dd><a href="https://sophiespence.github.io" target="_blank">Sophie Spence</a></dd>
+            <dd><a href="http://www.zachmicallef.com" target="_blank">Zachariah Micallef</a></dd>
+            <br><br>
+            <dt>1.4 CONTACT + CONNECT</dt>
+            <br>
+            <dd><a href="https://www.instagram.com/collider_ari/" target="_blank">@collider_ari</a></dd>
+            <dd><a href="mailto:collider.ari@gmail.com">collider.ari@gmail.com</a></dd>
+            
+        </dl>
+    </div>
+
+</div>
+
+
+</body>
+
+<script>
+
+    function toggleMenu() {
+    
+        var menuButton = document.getElementById('menu-button');
+        var menuContent = document.getElementById('header-dropdown');
+    
+    if (menuContent.style.display == "block") {
+        menuContent.style.display = "none";
+        menuButton.innerHTML = "Menu";
+        menuButton.style.color = "black";
+    } else {
+        menuContent.style.display = "block";
+        menuButton.innerHTML = "Close";
+    }
+    }
+
+    function toggleContent(id) {
+
+        var toggleButton = document.getElementById('content-button');
+        var toggleContent = document.getElementById(id);
+
+        if (toggleContent.style.display == "block") {
+        toggleContent.style.display = "none";
+        toggleButton.innerHTML = "(+ More)";
+        toggleButton.style.color = "black";
+        } else {
+        toggleContent.style.display = "block";
+        toggleButton.innerHTML = "(- Less)";
+        toggleButton.style.color = "grey";
+    }
+    }
+    
+</script>
+
+</html>

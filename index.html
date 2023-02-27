@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="icon.png">
+    <title>COLLIDER</title>
+    
+    
+</head>
+<body>
+
+<div class="top-content">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam sed aut autem debitis aliquam velit consectetur nemo tempore fugiat. Nisi iure asperiores sit harum maiores non praesentium nam. Cupiditate impedit officiis consequuntur quam, iusto labore, asperiores eius quod odit laboriosam veritatis doloremque esse atque, sed quae ad libero expedita! Pariatur veritatis inventore recusandae rem, perspiciatis totam voluptatem optio quo obcaecati, deserunt ad corrupti placeat odit dolores ex voluptas molestiae nostrum laborum, omnis veniam! Quis rem in distinctio vel perspiciatis. Deleniti dignissimos quos nostrum autem odit voluptate cupiditate placeat quod illum consectetur nulla consequatur, veritatis iste id voluptatibus omnis vel ipsam.<br><br>
+</div>
+
+<div id="header" class="header-container">
+    <div class="header-element"><a href="index.html">Collider Gallery</a></div>
+    <div class="menu-element"><a id="menu-button" onclick="toggleMenu()">Menu</a>
+        <div id="header-dropdown">
+            <a href="about.html">About</a>
+            <br>
+            <a href="mailto:collider.ari@gmail.com">Contact</a>
+            <br>  
+        </div>
+    </div>
+</div>    
+
+<div class="content-container" id="content">
+    <div class="content-element">
+        Alte Papierformate, Teilung zum Quadrat
+        <br>
+        Ulrick Ruckriem
+        <br>
+        <br>
+        Pictured: <i>Untitled</i> (2023), <i>Granite Bleu de Vire</i> (2023)
+        <br><br>
+        <a id="content-button" onclick="toggleContent('content-expanded')">(+ More)</a>
+        <div id="content-expanded">
+        <br>Ulrich Rückriem (born 30 September 1938) is a German sculptor notable for his monumental stone sculptures. He lives and works in Cologne and London. His abstract works of art are often assigned to the style of minimalism and process art.</div>
+    </div>
+    <div class="content-element">
+        1 March - 16 March 2023
+        <br>
+    </div>
+    <div class="content-element">
+        <img src="images/untitled-1989-20180723141756.1000-0-85.jpg">
+    </div>
+    <div class="content-element">
+        <img src="images/wall-sculpture-granite-bleu-de-vire-slpit-and-cut-1995-200x300x35-cm-90-dpi-front-20180723141756.1000-0-85.jpg">
+    </div>
+    <div class="content-element">
+        <img src="images/wall-sculpture-granite-bleu-de-vire-split-and-cut-1991220x220x30cm-90-dpi-left-20180723141756.1000-0-85.jpg">
+    </div>
+</div> 
+
+<div class="content-container" id="content">
+    <div class="content-element">
+        From the Vapor of Gasoline
+        <br>
+        David Hammons
+        <br>
+        <br>
+        Pictured: <i>Installation Images</i> (2023)
+        <br><br>
+        <a id="content-button" onclick="toggleContent('content-expanded2')">(+ More)</a>
+        <div id="content-expanded2">
+        <br>In the years after the Second World War, a golden age of economic growth seemed set to fulfil the historian James Truslow Adams’ celebrated description of the American Dream ‘of a land in which life should be better and richer and fuller for everyone, with opportunity for each according to ability’. By the end of the 1960s, a flurry of political assassinations, civil unrest and the escalation of the Cold War precipitated a national crisis of confidence that reached its apogee with the 1973 oil embargo.
+
+        The title of this exhibition, borrowing from the evocative slogan painted across Jean-Michel Basquiat’s Peruvian Maid (1985), conjures a society running on empty. Its artists – loosely linked by a network of personal and professional relationships, as between Cady Noland and Steven Parrino, Jenny Holzer and Barbara Kruger, Richard Prince and Christopher Wool – chronicle a dramatic ideological shift. If the prevailing atmosphere is of disillusion, then it is not without hope: with the end of a dream comes a renewed engagement with reality.</div>
+    </div>
+    <div class="content-element">
+        20 March - 2 April 2023
+        <br>
+    </div>
+    <div class="content-element">
+        <img src="images/jj63424-5.jpg">
+    </div>
+    <div class="content-element">
+        <img src="images/jj63424-6.jpg">
+    </div>
+    <div class="content-element">
+        <img src="images/jj63424.jpg">
+    </div>
+</div> 
+
+
+</body>
+
+<script>
+
+    window.onscroll = function() {stickyScroll()};
+
+    var header = document.getElementById("header");
+    var sticky = header.offsetTop;
+    var content = document.getElementById("content");
+
+    function stickyScroll() {
+        if (window.pageYOffset > sticky) {
+            header.classList.add("sticky");
+            content.style.paddingTop = "1.8em";
+        } else {
+            header.classList.remove("sticky");
+            content.style.paddingTop = "0";
+        }
+    }
+
+
+    function toggleMenu() {
+    
+        var menuButton = document.getElementById('menu-button');
+        var menuContent = document.getElementById('header-dropdown');
+    
+    if (menuContent.style.display == "block") {
+        menuContent.style.display = "none";
+        menuButton.innerHTML = "Menu";
+        menuButton.style.color = "black";
+    } else {
+        menuContent.style.display = "block";
+        menuButton.innerHTML = "Close";
+    }
+    }
+
+    function toggleContent(id) {
+
+        var toggleButton = document.getElementById('content-button');
+        var toggleContent = document.getElementById(id);
+
+        if (toggleContent.style.display == "block") {
+        toggleContent.style.display = "none";
+        toggleButton.innerHTML = "(+ More)";
+        toggleButton.style.color = "black";
+        } else {
+        toggleContent.style.display = "block";
+        toggleButton.innerHTML = "(- Less)";
+        toggleButton.style.color = "grey";
+    }
+    }
+    
+</script>
+
+</html>
