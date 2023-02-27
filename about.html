@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="icon.png">
+    <title>COLLIDER</title>
+    
+</head>
+<body>
+
+<div class="header-container">
+    <div class="header-element"><a href="index.html">Collider Gallery</a></div>
+    <div class="menu-element"><a id="menu-button" onclick="toggleMenu()">Menu</a>
+        <div id="header-dropdown">
+            <a href="index.html">Home</a>
+            <br>
+            <a href="mailto:collider.ari@gmail.com">Contact</a>
+            <br> 
+        </div>
+    </div>
+</div>    
+
+<div class="content-container">
+    <div class="content-element">
+        <dl>
+            <dt>1.1 UPCOMING</dt>
+            <br>
+            <dd>Upcoming Show 1 (March 1 - March 16 2023)</dd>
+            <dd>Upcoming Show 2 (March 18 - April 2 2023)</dd>
+            <dd>Upcoming Show 3 (April 4 - April 18 2023)</dd>
+            <dd>Upcoming Show 4 (April 20 - May 4 2023)</dd>
+            <dd>Upcoming Show 5 (May 6 - May 20 2023)</dd>
+            <br><br>
+            <dt>1.2CONTACT + CONNECT</dt>
+            <br>
+            <dd><a href="https://www.instagram.com/collider_ari/" target="_blank">@collider_ari</a></dd>
+            <dd><a href="mailto:collider.ari@gmail.com">collider.ari@gmail.com</a></dd>
+            
+        </dl>
+    </div>
+
+</div>
+
+
+</body>
+
+<script>
+
+    function toggleMenu() {
+    
+        var menuButton = document.getElementById('menu-button');
+        var menuContent = document.getElementById('header-dropdown');
+    
+    if (menuContent.style.display == "block") {
+        menuContent.style.display = "none";
+        menuButton.innerHTML = "Menu";
+        menuButton.style.color = "black";
+    } else {
+        menuContent.style.display = "block";
+        menuButton.innerHTML = "Close";
+    }
+    }
+
+    function toggleContent(id) {
+
+        var toggleButton = document.getElementById('content-button');
+        var toggleContent = document.getElementById(id);
+
+        if (toggleContent.style.display == "block") {
+        toggleContent.style.display = "none";
+        toggleButton.innerHTML = "(+ More)";
+        toggleButton.style.color = "black";
+        } else {
+        toggleContent.style.display = "block";
+        toggleButton.innerHTML = "(- Less)";
+        toggleButton.style.color = "grey";
+    }
+    }
+    
+</script>
+
+</html>
