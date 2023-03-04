@@ -60,6 +60,13 @@ a:hover {
     padding-top:0;
 }
 
+.content-header {
+    width: 33vw;
+    box-sizing: border-box;
+    padding:20px;
+    font-size: 0.7em;
+}
+
 .content-element {
     width: 50vw;
     box-sizing: border-box;
@@ -92,6 +99,10 @@ a:hover {
         width:100vw;
         box-sizing: border-box;
         padding-bottom: 2em;
+    }
+
+    .content-header {
+        width:100vw;
     }
     
     .header-element {
